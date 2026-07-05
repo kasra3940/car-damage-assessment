@@ -140,6 +140,15 @@ the normalization table used to reconcile them.
 - [ ] Docker deployment
 - [ ] Public demo (Hugging Face Spaces / Streamlit)
 
+## Acknowledgments
+
+The overall system architecture (7-stage pipeline), core business logic
+(mask fusion, hidden damage risk heuristics, repair-vs-replace reasoning),
+and dataset research were designed by me. AI assistance (Claude) was used
+for scaffolding boilerplate code, drafting documentation, and exploring
+implementation approaches.
+
+
 ## License
 
 MIT

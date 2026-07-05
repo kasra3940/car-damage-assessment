@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+*.env
+
+# Data (too large for git, download separately)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model weights (too large for git — use releases or external storage)
+*.pt
+*.pth
+*.onnx
+weights/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+runs/
+
+# Test cache
+.pytest_cache/

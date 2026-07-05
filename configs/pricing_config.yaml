@@ -1,0 +1,38 @@
+# Regional base price table used by the cost estimation module.
+#
+# NOTE: these are placeholder sample values for development, NOT live
+# market prices. No free, reliable API exists for real repair costs in any
+# region. In production, this table should be populated from manual market
+# research and/or refreshed via Gemini + Google Search grounding (see
+# src/cost_estimation/estimator.py).
+
+currency_by_region:
+  US: "USD"
+  IR: "IRR"
+
+# Full replacement cost of the part, per region, in the region's currency
+part_base_replacement_cost:
+  front_bumper:      {US: 450,  IR: 8000000}
+  rear_bumper:       {US: 420,  IR: 7500000}
+  front_door:        {US: 900,  IR: 25000000}
+  front_left_door:   {US: 900,  IR: 25000000}
+  front_right_door:  {US: 900,  IR: 25000000}
+  rear_door:         {US: 850,  IR: 23000000}
+  hood:              {US: 600,  IR: 15000000}
+  front_fender:      {US: 300,  IR: 6000000}
+  headlight:         {US: 300,  IR: 6000000}
+  taillight:         {US: 220,  IR: 4500000}
+  side_mirror:       {US: 150,  IR: 3000000}
+  windshield:        {US: 500,  IR: 12000000}
+
+# Multiplier applied to the base replacement cost, depending on how the
+# damage is addressed
+severity_action_multiplier:
+  minor:
+    repair: 0.15     # buff / minor bodywork only
+  medium:
+    repair: 0.45      # bodywork + paint
+    replace: 1.0
+  severe:
+    repair: 0.70      # heavy bodywork, still cheaper than full replacement
+    replace: 1.0

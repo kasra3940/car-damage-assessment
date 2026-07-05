@@ -1,0 +1,28 @@
+# Core
+numpy>=1.26
+opencv-python>=4.9
+Pillow>=10.2
+
+# Deep learning
+torch>=2.2
+torchvision>=0.17
+ultralytics>=8.1          # YOLOv8 for part & damage segmentation
+
+# ML / regression (cost estimation)
+scikit-learn>=1.4
+pandas>=2.2
+
+# Gemini API
+google-genai>=0.4
+
+# API serving
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9
+
+# Config & utils
+pyyaml>=6.0
+python-dotenv>=1.0
+
+# Testing
+pytest>=8.0

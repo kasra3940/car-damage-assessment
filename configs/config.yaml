@@ -1,0 +1,15 @@
+# Main pipeline configuration
+
+models:
+  part_segmentation_weights: "weights/part_segmentation_yolov8seg.pt"
+  damage_segmentation_weights: "weights/damage_segmentation_yolov8seg.pt"
+
+fusion:
+  overlap_threshold: 0.5   # minimum IoU to consider a damage mask "on" a part
+
+pricing:
+  default_region: "US"
+
+gemini:
+  model: "gemini-2.5-flash"
+  enable_search_grounding: true
